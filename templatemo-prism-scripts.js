@@ -65,18 +65,16 @@ https://templatemo.com/tm-600-prism-flux
 
         // Skills data
         const skillsData = [
-            { name: 'React.js', icon: '⚛️', level: 95, category: 'frontend' },
-            { name: 'Node.js', icon: '🟢', level: 90, category: 'backend' },
-            { name: 'TypeScript', icon: '📘', level: 88, category: 'frontend' },
-            { name: 'AWS', icon: '☁️', level: 92, category: 'cloud' },
-            { name: 'Docker', icon: '🐳', level: 85, category: 'cloud' },
-            { name: 'Python', icon: '🐍', level: 93, category: 'backend' },
-            { name: 'Kubernetes', icon: '☸️', level: 82, category: 'cloud' },
-            { name: 'GraphQL', icon: '◈', level: 87, category: 'backend' },
-            { name: 'TensorFlow', icon: '🤖', level: 78, category: 'emerging' },
-            { name: 'Blockchain', icon: '🔗', level: 75, category: 'emerging' },
-            { name: 'Vue.js', icon: '💚', level: 85, category: 'frontend' },
-            { name: 'MongoDB', icon: '🍃', level: 90, category: 'backend' }
+            { name: 'HTML5', icon: '📄', category: 'frontend' },
+            { name: 'JavaScript', icon: '⚡', category: 'frontend' },
+            { name: 'Bootstrap', icon: '🅱️', category: 'frontend' },
+            { name: 'Responsive Design', icon: '📱', category: 'frontend' },
+            { name: 'CSS', icon: '🎨', category: 'frontend' },
+            { name: 'MySQL', icon: '🐬', category: 'cloud' },
+            { name: 'SQLite', icon: '🍃', category: 'cloud' },
+            { name: 'Node.js', icon: '🌐', category: 'emerging' },
+            { name: 'Spring Boot(Java)', icon: '⚛️', category: 'emerging' },
+           
         ];
 
         // Scroll to section function
@@ -93,30 +91,8 @@ https://templatemo.com/tm-600-prism-flux
             }
         }
 
-        // Initialize particles for philosophy section
-        function initParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 15;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                // Random horizontal position
-                particle.style.left = Math.random() * 100 + '%';
-                
-                // Start particles at random vertical positions throughout the section
-                particle.style.top = Math.random() * 100 + '%';
-                
-                // Random animation delay for natural movement
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                
-                // Random animation duration for variety
-                particle.style.animationDuration = (18 + Math.random() * 8) + 's';
-                
-                particlesContainer.appendChild(particle);
-            }
-        }
+        
+        
 
         // Initialize carousel
         let currentIndex = 0;
@@ -291,7 +267,6 @@ https://templatemo.com/tm-600-prism-flux
                                 <div class="skill-level">
                                     <div class="skill-level-fill" style="width: ${skill.level}%"></div>
                                 </div>
-                                <div class="skill-percentage-hex">${skill.level}%</div>
                             </div>
                         </div>
                     `;
@@ -336,7 +311,7 @@ https://templatemo.com/tm-600-prism-flux
         // Initialize on load
         initCarousel();
         initSkillsGrid();
-        initParticles();
+        
 
         // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
